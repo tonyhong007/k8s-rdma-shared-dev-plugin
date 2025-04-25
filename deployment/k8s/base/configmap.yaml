@@ -7,19 +7,20 @@ data:
   config.json: |
     {
         "periodicUpdateInterval": 300,
-        "configList": [{
-             "resourceName": "hca_shared_devices_a",
-             "rdmaHcaMax": 1000,
-             "devices": ["ib0", "ib1"]
-           },
-           {
-             "resourceName": "hca_shared_devices_b",
-             "rdmaHcaMax": 500,
-             "selectors": {
-               "vendors": ["15b3"],
-               "deviceIDs": ["1017"],
-               "ifNames": ["ib3", "ib4"]
-             }
-           }
+        "configList": [
+          {
+            "resourceName": "hca_shared_devices_a",
+            "rdmaHcaMax": 1000,
+            "selectors": {
+              "ifNames": ["eno49np0", "eno50np1"]
+            }
+          },
+          {
+            "resourceName": "hca_shared_devices_b",
+            "rdmaHcaMax": 500,
+            "selectors": {
+              "ifNames": ["ens1f0np0", "ens1f1np1"]
+            }
+          }
         ]
     }
